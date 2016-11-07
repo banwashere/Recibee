@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		467CCC23E7073C2FACADB884 /* Pods_ReciBeeProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A921E0147483103A0C2DBB55 /* Pods_ReciBeeProject.framework */; };
+		670262CF1DD07F27000FEC48 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670262CE1DD07F27000FEC48 /* LoginViewController.swift */; };
+		670262D11DD07F35000FEC48 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670262D01DD07F35000FEC48 /* RegisterViewController.swift */; };
+		670262D31DD07F5E000FEC48 /* CreateRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670262D21DD07F5E000FEC48 /* CreateRecipeViewController.swift */; };
+		670262D51DD07F6F000FEC48 /* StepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670262D41DD07F6F000FEC48 /* StepsViewController.swift */; };
+		670262D71DD08243000FEC48 /* IngredientList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670262D61DD08243000FEC48 /* IngredientList.swift */; };
+		670262D91DD08966000FEC48 /* IngredientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670262D81DD08966000FEC48 /* IngredientTableViewCell.swift */; };
 		677961431DC4707200CA5ABE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677961421DC4707200CA5ABE /* AppDelegate.swift */; };
 		677961451DC4707200CA5ABE /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677961441DC4707200CA5ABE /* SplashViewController.swift */; };
 		677961481DC4707200CA5ABE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 677961461DC4707200CA5ABE /* Main.storyboard */; };
@@ -15,6 +22,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		670262CE1DD07F27000FEC48 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		670262D01DD07F35000FEC48 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		670262D21DD07F5E000FEC48 /* CreateRecipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateRecipeViewController.swift; sourceTree = "<group>"; };
+		670262D41DD07F6F000FEC48 /* StepsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepsViewController.swift; sourceTree = "<group>"; };
+		670262D61DD08243000FEC48 /* IngredientList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientList.swift; sourceTree = "<group>"; };
+		670262D81DD08966000FEC48 /* IngredientTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientTableViewCell.swift; sourceTree = "<group>"; };
 		6779613F1DC4707200CA5ABE /* ReciBeeProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReciBeeProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		677961421DC4707200CA5ABE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		677961441DC4707200CA5ABE /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +35,9 @@
 		677961491DC4707200CA5ABE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6779614C1DC4707200CA5ABE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6779614E1DC4707200CA5ABE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67F8FC1BB098E2E01057848D /* Pods-ReciBeeProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReciBeeProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReciBeeProject/Pods-ReciBeeProject.debug.xcconfig"; sourceTree = "<group>"; };
+		90942007D590A07DDD687F8D /* Pods-ReciBeeProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReciBeeProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReciBeeProject/Pods-ReciBeeProject.release.xcconfig"; sourceTree = "<group>"; };
+		A921E0147483103A0C2DBB55 /* Pods_ReciBeeProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReciBeeProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +45,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				467CCC23E7073C2FACADB884 /* Pods_ReciBeeProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B89EF069A319AABAE10247E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				67F8FC1BB098E2E01057848D /* Pods-ReciBeeProject.debug.xcconfig */,
+				90942007D590A07DDD687F8D /* Pods-ReciBeeProject.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		2D612B1F704734E0E18C6C9D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A921E0147483103A0C2DBB55 /* Pods_ReciBeeProject.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		677961361DC4707200CA5ABE = {
 			isa = PBXGroup;
 			children = (
 				677961411DC4707200CA5ABE /* ReciBeeProject */,
 				677961401DC4707200CA5ABE /* Products */,
+				1B89EF069A319AABAE10247E /* Pods */,
+				2D612B1F704734E0E18C6C9D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,11 +91,17 @@
 			isa = PBXGroup;
 			children = (
 				677961421DC4707200CA5ABE /* AppDelegate.swift */,
-				677961441DC4707200CA5ABE /* SplashViewController.swift */,
 				677961461DC4707200CA5ABE /* Main.storyboard */,
 				677961491DC4707200CA5ABE /* Assets.xcassets */,
 				6779614B1DC4707200CA5ABE /* LaunchScreen.storyboard */,
 				6779614E1DC4707200CA5ABE /* Info.plist */,
+				677961441DC4707200CA5ABE /* SplashViewController.swift */,
+				670262CE1DD07F27000FEC48 /* LoginViewController.swift */,
+				670262D01DD07F35000FEC48 /* RegisterViewController.swift */,
+				670262D21DD07F5E000FEC48 /* CreateRecipeViewController.swift */,
+				670262D41DD07F6F000FEC48 /* StepsViewController.swift */,
+				670262D61DD08243000FEC48 /* IngredientList.swift */,
+				670262D81DD08966000FEC48 /* IngredientTableViewCell.swift */,
 			);
 			path = ReciBeeProject;
 			sourceTree = "<group>";
@@ -71,9 +113,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 677961511DC4707200CA5ABE /* Build configuration list for PBXNativeTarget "ReciBeeProject" */;
 			buildPhases = (
+				AC5C07161215E042E37AB98E /* [CP] Check Pods Manifest.lock */,
 				6779613B1DC4707200CA5ABE /* Sources */,
 				6779613C1DC4707200CA5ABE /* Frameworks */,
 				6779613D1DC4707200CA5ABE /* Resources */,
+				0C09CBEE801607F9593962B9 /* [CP] Embed Pods Frameworks */,
+				C9FF435DD8AF319F539E0A73 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,13 +177,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0C09CBEE801607F9593962B9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReciBeeProject/Pods-ReciBeeProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC5C07161215E042E37AB98E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C9FF435DD8AF319F539E0A73 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReciBeeProject/Pods-ReciBeeProject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6779613B1DC4707200CA5ABE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				670262D31DD07F5E000FEC48 /* CreateRecipeViewController.swift in Sources */,
+				670262D71DD08243000FEC48 /* IngredientList.swift in Sources */,
+				670262CF1DD07F27000FEC48 /* LoginViewController.swift in Sources */,
 				677961451DC4707200CA5ABE /* SplashViewController.swift in Sources */,
+				670262D91DD08966000FEC48 /* IngredientTableViewCell.swift in Sources */,
 				677961431DC4707200CA5ABE /* AppDelegate.swift in Sources */,
+				670262D51DD07F6F000FEC48 /* StepsViewController.swift in Sources */,
+				670262D11DD07F35000FEC48 /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +358,7 @@
 		};
 		677961521DC4707200CA5ABE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67F8FC1BB098E2E01057848D /* Pods-ReciBeeProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = PBF5QD74E4;
@@ -272,6 +372,7 @@
 		};
 		677961531DC4707200CA5ABE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90942007D590A07DDD687F8D /* Pods-ReciBeeProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = PBF5QD74E4;

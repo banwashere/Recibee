@@ -9,6 +9,9 @@
 import UIKit
 
 class SplashViewController: UIViewController {
+    
+    @IBOutlet weak var loginBtn: UIButton!
+    @IBOutlet weak var registerBtn: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +22,8 @@ class SplashViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
 
 
 }
