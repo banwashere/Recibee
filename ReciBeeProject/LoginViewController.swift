@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginViewController: UIViewController {
     
-    @IBOutlet weak var skipBtn:UIButton!
+    @IBOutlet weak var loginBtn: UIButton!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,15 +26,15 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func loginAction(_ sender: AnyObject){
+        
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        FIRAuth.auth()?.signIn(withEmail: emailTextField.text!, password: passwordTextField.text!, completion: {(user, error) in
+            
+            if user != nil{
+                self.performSegue(withIdentifier: "goToCreateRecipe", sender: nil)}
+            
+            }
+        )
     }
-    */
-
 }

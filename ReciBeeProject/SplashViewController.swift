@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SplashViewController: UIViewController {
     
@@ -16,6 +17,8 @@ class SplashViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,8 +26,7 @@ class SplashViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+
     
-
-
 }
 

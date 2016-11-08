@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class CreateRecipeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -19,8 +20,15 @@ class CreateRecipeViewController: UIViewController, UITableViewDelegate, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        ingredientTableView.delegate = self
+        ingredientTableView.dataSource = self
+
 
         // Do any additional setup after loading the view.
+        
+//        createTestData()
+         downloadDataFirebase()
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,7 +54,69 @@ class CreateRecipeViewController: UIViewController, UITableViewDelegate, UITable
         
         return cell
     }
+    
+//    func createTestData(){
+//        
+//        let newIngredient = IngredientList(ingredientName: "FP Pure Cane Sugar(Fine)", ingredientType: "Sugar", ingredientImageURL: "")
+//        
+//        newIngredient.savetoFirebase()
+//    }
+    
+    func downloadDataFirebase(){
+        
+        let databaseRef = FIRDatabase.database().reference()
+        let ingredientRef = databaseRef.child("IngredientList")
+        
+        ingredientRef.observe(.childAdded, with: { (snapshot) in
+            
+            let result = snapshot.value as! [String:Any]
+            let ingredientName = result["ingredientName"] as! String
+            let ingredientType = result["ingredientType"] as! String
+            let ingredientImageURL = result["ingredientImageURL"] as! String?
+            
+            let ingredientList = IngredientList(ingredientName: ingredientName, ingredientType: ingredientType, ingredientImageURL: ingredientImageURL!, ingredientId: snapshot.key)
+            
+            self.arrayOfIngredients.append(ingredientList)
+        }
+            )
+        ingredientRef.observe(.childChanged, with: { (snapshot) in
+            
+            let ingredientId = snapshot.key
+            
+            let ingredientToUpdate = self.ingredientPost(ingredientId: ingredientId)!
+            
+            let result = snapshot.value as! [String: Any]
+            
+            let ingredientName = result["ingredientName"] as! String
+            let ingredientImageURL = result["ingredientImageURL"] as! String
+            let ingredientType = result["ingredientType"] as! String
+            
+        
+            ingredientToUpdate.ingredientName = ingredientName
+            ingredientToUpdate.ingredientImageURL = ingredientImageURL
+            ingredientToUpdate.ingredientType = ingredientType
+            
+        })
+        
+        ingredientRef.observe(.value, with: { (snapshot) in
+            
+            self.ingredientTableView.reloadData()
+            
+        })
 
 
 
+}
+        
+    func ingredientPost(ingredientId: String) -> IngredientList? {
+        
+        for post in arrayOfIngredients {
+            
+            if post.ingredientId == ingredientId {
+                
+                return post
+            }
+        }
+            return nil
+        }
 }
